@@ -49,9 +49,23 @@ updateList();
 var hmar = document.getElementById("horiz");
 var vmar = document.getElementById("vert");
 
-if(!((Math.random()*1000 / 10) % 5)){
-	console.log("speed up!");
-	var speed = Math.random()*10;
-	hmar.scrollamount = speed;
-	vmar.scrollamount = speed;
-}
+
+var timeoutTime = 1000;
+setInterval(function() {
+	var speed = Math.random()*100;
+	var xspeed = Math.random()*100;
+	console.log("speed up!", speed);
+	if(Math.floor(speed) === 50 ){
+		speed = 500;
+		console.log("WOOHOO!", speed);
+		timeoutTime = 10000;
+	} else if (speed < 10){
+		console.log("too slow...", speed);
+		speed = 10;
+	}
+	 else {
+		timeoutTime = 1000;
+	}
+	hmar.scrollAmount  = xspeed;
+	vmar.scrollAmount  = speed;
+}, timeoutTime); // Wait 1000ms before running again
