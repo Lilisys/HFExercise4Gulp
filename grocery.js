@@ -69,3 +69,9 @@ setInterval(function() {
 	hmar.scrollAmount  = xspeed;
 	vmar.scrollAmount  = speed;
 }, timeoutTime); // Wait 1000ms before running again
+
+function win(){
+	console.log("WINNER!");
+	var win = document.getElementById("winner");
+	win.innerHTML += "YOU WIN! ";
+}
