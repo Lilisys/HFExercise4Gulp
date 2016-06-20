@@ -1,0 +1,22 @@
+{
+  "name": "gulper",
+  "version": "1.0.0",
+  "description": "HF Bootcamp practice Gulp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lilisys/HFExercise4Gulp.git"
+  },
+  "author": "Jessica Wu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lilisys/HFExercise4Gulp/issues"
+  },
+  "homepage": "https://github.com/Lilisys/HFExercise4Gulp#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
