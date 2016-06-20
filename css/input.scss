@@ -1,0 +1,11 @@
+$font-stack:    comic sans ms, sans-serif;	
+$primary-color: #bff110;
+$bg-color: #BFFF00;
+
+
+ 
+body {
+  font: 100% $font-stack;
+  background-color: $bg-color;
+  color: $primary-color;
+}

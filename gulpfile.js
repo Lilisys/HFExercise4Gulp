@@ -1,10 +1,25 @@
 var gulp = require('gulp');
+var browserSync = require('browser-sync').create();
+var sass = require('gulp-sass');
+//static server
+gulp.task('syncAll', ['sass'], function(){
+	browserSync.init({
+		server: {
+			baseDir: "./"
+		}
+	});
+	gulp.watch("css/*.scss", ['sass']);
+	gulp.watch('index.html').on('change', browserSync.reload);
+}); 
 
-gulp.task('default', function(){
-	console.log("Is this the real life?");
+gulp.task('sass', function(){
+	console.log("hello");
+	return gulp.src('css/*.scss')
+	.pipe(sass())
+	.pipe(gulp.dest('css'))
+	.pipe(browserSync.stream());
 });
 
-//default is a dependency of this, will run that before running this
-gulp.task('rhapsody', ['default'], function(){ 
-	console.log("Is this just fantasy?");
-});
+gulp.task('default', ['syncAll']);
+
+
